@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border : 1px solid black;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            width: 306px;
+            flex-wrap: wrap;
+        }
+        .box
+        {   font-size: 70px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class ="box" id = "box1" onclick="taketurn('box1')"></div>
+        <div class ="box" id = "box2" onclick="taketurn('box2')"></div>
+        <div class ="box" id = "box3" onclick="taketurn('box3')"></div>
+        <div class ="box" id = "box4" onclick="taketurn('box4')"></div>
+        <div class ="box" id = "box5" onclick="taketurn('box5')"></div>
+        <div class ="box" id = "box6" onclick="taketurn('box6')"></div>
+        <div class ="box" id = "box7" onclick="taketurn('box7')"></div>
+        <div class ="box" id = "box8" onclick="taketurn('box8')"></div>
+        <div class ="box" id = "box9" onclick="taketurn('box9')"></div>
+    </div>
+
+    <script> 
+        var numberOfClicks = 0;
+        function taketurn(id)
+        {  
+            var clickebled = document.getElementById(id);
+                numberOfClicks++;
+                clickebled.innerText = numberOfClicks % 2 !== 0 ? "X" : "O";
+                clickebled.style.pointerEvents= "none";
+        }
+    </script>
+</body>
+</html>
