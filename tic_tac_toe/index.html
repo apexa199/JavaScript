@@ -38,12 +38,12 @@
     </div>
 
     <script> 
-        var numberOfClicks = 0;
+        var number_Of_Clicks = 0;
         function taketurn(id)
         {  
             var clickebled = document.getElementById(id);
-                numberOfClicks++;
-                clickebled.innerText = numberOfClicks % 2 !== 0 ? "X" : "O";
+                number_Of_Clicks++;
+                clickebled.innerText = number_Of_Clicks % 2 !== 0 ? "X" : "O";
                 clickebled.style.pointerEvents= "none";
         }
     </script>
