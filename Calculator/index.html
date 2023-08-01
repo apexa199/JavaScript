@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <select id = "my_Select">
+        <option value = "Addition">Addition</option>
+        <option value = "Divide">Divide</option>
+        <option value = "Subtract">Subtract</option>
+        <option value = "Multiply">Multiply</option>
+    </select>
+    <input type ="text" id="input2">
+    <button onclick="calculator()">Submit</button>
+    <div id="output"></div>
+
+    <script>
+        function calculator()
+        {
+        var opt = document.getElementById("my_Select").value;
+        var input1 = Number(document.getElementById("input1").value);
+        var input2 = Number(document.getElementById("input2").value);
+        switch(opt)
+        {
+            case "Addition":
+            Add = input1 + input2;
+            document.getElementById("output").innerText = Add;
+            break;
+
+            case "Subtract":
+            Sub = input1 - input2;
+            document.getElementById("output").innerText = Sub;
+            break;
+
+            case "Multiply":
+            Mul = input1 * input2;
+            document.getElementById("output").innerText = Mul;
+            break;
+
+            case "Divide":
+            if (input2 !== 0)
+            {
+            Div = input1 / input2;
+            document.getElementById("output").innerText = Div;
+            }
+            else
+            {
+                document.getElementById("output").innerText = "Not divisible by 0";
+            }
+            break;
+        }
+        }
+
+    </script>
+
+
+
+</body>
+</html>
