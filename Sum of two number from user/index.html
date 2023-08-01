@@ -12,9 +12,9 @@
     <script>
         function inputs()
         {
-            var storevalue1 = document.getElementById("a").value;
-            var storevalue2 = document.getElementById("b").value;
-            document.getElementById("c").innerHTML = Number(storevalue1) + Number(storevalue2);
+            var storevalue1 = Number(document.getElementById("a").value);
+            var storevalue2 = Number(document.getElementById("b").value);
+            document.getElementById("c").innerHTML = storevalue1 + storevalue2;
             document.getElementById("a").value = "";
             document.getElementById("b").value = "";
          
