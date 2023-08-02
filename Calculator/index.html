@@ -6,56 +6,72 @@
 </head>
 <body>
     <input type="text" id="input1">
-    <select id = "my_Select">
-        <option value = "Addition">Addition</option>
-        <option value = "Divide">Divide</option>
-        <option value = "Subtract">Subtract</option>
-        <option value = "Multiply">Multiply</option>
+    <select id = "opration">
+        <option value = "">Select any one</option>
+        <option value = "Addition">+</option>
+        <option value = "Subtract">-</option>
+        <option value = "Multiply">*</option>
+        <option value = "Divide">/</option>
+        <option value = "Power">**</option>
+
     </select>
     <input type ="text" id="input2">
-    <button onclick="calculator()">Submit</button>
+    <button onclick="calculate()">Calculator</button>
     <div id="output"></div>
 
     <script>
-        function calculator()
+        function calculate()
         {
-        var opt = document.getElementById("my_Select").value;
-        var input1 = Number(document.getElementById("input1").value);
-        var input2 = Number(document.getElementById("input2").value);
-        switch(opt)
+            var input1 = Number(document.getElementById("input1").value);
+            var input2 = Number(document.getElementById("input2").value);
+            var oprationToperForm = document.getElementById("opration").value;
+            var result;
+
+        switch(oprationToperForm)
         {
             case "Addition":
-            Add = input1 + input2;
-            document.getElementById("output").innerText = Add;
+                result = input1 + input2;
             break;
 
             case "Subtract":
-            Sub = input1 - input2;
-            document.getElementById("output").innerText = Sub;
+            if(input1 > input2)
+            {
+                result = input1 - input2;
+            }
+            else
+            {
+                result = "Input1 is less then Input2!";
+            }
             break;
 
             case "Multiply":
-            Mul = input1 * input2;
-            document.getElementById("output").innerText = Mul;
+                result = input1 * input2;
             break;
 
             case "Divide":
             if (input2 !== 0)
             {
-            Div = input1 / input2;
-            document.getElementById("output").innerText = Div;
+                result = input1 / input2;
             }
             else
             {
-                document.getElementById("output").innerText = "Not divisible by 0";
+                result = "Not divisible by 0";
             }
             break;
+
+            case "Power":
+                result = Math.pow(input1,input2);
+            break;
+
+            default:
+                result = "Please select the option!";
+            break;    
         }
+            document.getElementById("output").innerText = result;
+            document.getElementById("input1").value = "";
+            document.getElementById("input2").value = "";
         }
 
     </script>
-
-
-
 </body>
 </html>
