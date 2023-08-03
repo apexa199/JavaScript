@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="text" id="input1">
+   <input type="text" id="input2">
+   <button id="output" onclick="pow()">Calculate</button>
+   <div id="opration"></div>
+
+    <script>
+        function pow()
+        {
+            var storevalue1 = document.getElementById("input1").value;
+            var storevalue2 = document.getElementById("input2").value;
+            var result = 1;
+
+            for( i = 0; i < storevalue2; i++)
+            {
+                result = result * storevalue1;
+            }
+            document.getElementById("opration").innerText = result;
+            document.getElementById("input1").value = "";
+            document.getElementById("input2").value = "";
+        }
+    </script>
+    
+</body>
+</html>
