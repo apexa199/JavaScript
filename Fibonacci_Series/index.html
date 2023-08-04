@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type ="text" id="Input1">
+    <button onclick="Fibo()">Cal_Fibo</button>
+    <div id="Output"></div>
+
+    <script>
+        function Fibo()
+        {
+            document.getElementById("Output").innerHTML = "";
+            var input_value = Number(document.getElementById("Input1").value);
+            var a = 0;
+            var b = 1;
+            var c = 0;
+            for(i = 0; i < input_value  ; i++)
+            {
+                if (i == 0)
+                {
+                    document.getElementById("Output").innerHTML += "<p>" + a + "</p>" ;
+                }
+                else if (i == 1)
+                {
+                    document.getElementById("Output").innerHTML += "<p>" + b + "</p>" ;
+                }
+                else
+                {
+                    c = a + b
+                    a = b
+                    b = c
+                    document.getElementById("Output").innerHTML += "<p>" + c + "</p>" ;
+                    document.getElementById("Input1").value = "";
+                
+                }
+            }
+        }
+      
+    </script>
+</body>
+</html>
