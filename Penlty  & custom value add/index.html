@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+           Add Penlty value :<span id = "penltyvalue">0</span> 
+        </div><br>
+        <button onclick="addvalue()" id = "button1">+10</button>
+        <input type="text" id= "inputvalue" />
+        <button onclick="addvalue1()" id = "button2">Add custom value</button>
+        <script>
+            var currentvalue = 0;
+            function addvalue()
+            {
+            document.getElementById("penltyvalue").innerText = currentvalue  + 10;
+            currentvalue = currentvalue + 10;
+            }
+            function addvalue1()
+            {
+            document.getElementById("penltyvalue").innerText = currentvalue + Number(document.getElementById("inputvalue").value);
+            document.getElementById("inputvalue").value = "";
+            }
+        </script>
+    </body>
+</html>
