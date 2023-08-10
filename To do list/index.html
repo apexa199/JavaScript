@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1" />
+    <button onclick="addtodo()">Submit</button>
+    <ul id="result"></ul>
+    <script>
+        function addtodo()
+        {
+            var inputValue = document.getElementById("input1").value;
+            var liElement = "<li>" + inputValue + "</li>";
+            document.getElementById("result").innerHTML += liElement;
+            document.getElementById("input1").value = "";
+        }
+    </script>
+</body>
+</html>
+
+<!-- Second Approach   -->
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1" />
+    <button onclick="addtodo()">Submit</button>
+    <ul id="result"></ul>
+    <script>
+        function addtodo()
+        {
+            var inputValue = document.getElementById("input1").value;
+            var liElement1 = document.createElement("li");
+            liElement1.innerText = inputValue;
+            document.getElementById("result").append(liElement1);
+            document.getElementById("input1").value = "";
+        }
+    </script>
+</body>
+</html> -->
