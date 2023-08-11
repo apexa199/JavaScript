@@ -7,11 +7,11 @@
     </head>
     <body>
         <div>
-           Current Fixed Penalty : 10
+           Current Fixed Penalty : <span id="changePenlty"></span>
         </div>
 
         <div>
-            Current Penalty Value :<span id = "penaltyValue"></span><br/><br />
+            Current Penalty Amount : <span id = "penaltyValue">0</span> <br/><br />
         </div>
             
         <button onclick="addFixedPenalty()" id="fixValue" >Add Fixed value</button><br /><br/>
@@ -48,6 +48,7 @@
             {
             var changePenaltyValue = Number(document.getElementById("input2").value);
             a = changePenaltyValue;
+            document.getElementById("changePenlty").innerText = changePenaltyValue;
             document.getElementById("input2").value = "";
             }
         
