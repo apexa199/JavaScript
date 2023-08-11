@@ -4,26 +4,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+      
     </head>
     <body>
-        <div>
-           Current Fixed Penalty : <span id="changePenlty"></span>
+        <div style="display: none;" id = "first">
+           Current Fixed Penalty : <span id="changePenlty">10</span>
         </div>
 
-        <div>
+        <div style="display: none;" id = "sec">
             Current Penalty Amount : <span id = "penaltyValue">0</span> <br/><br />
         </div>
-            
-        <button onclick="addFixedPenalty()" id="fixValue" >Add Fixed value</button><br /><br/>
+        
+        <div  style="display: none;" id="third">
+        <button onclick="addFixedPenalty()" >Add Fixed value</button>
+        </div><br />
         
         <div>
-            <input type="text" id= "input1" />
-            <button onclick="addCustomValue()" >Add Custom Value</button>
+            <input type="text" id= "input1" style="display: none;"/>
+            <button onclick="addCustomValue()" style="display: none;" id="c">Add Custom Value</button>
         </div><br>
 
         <div>
             <input type="text" id="input2" />
-            <button onclick="ChangePenalty()"> Change Penalty Value</button>
+            <button onclick="setPenalty()" id="change"> Set Penalty Value</button>
         </div>  
 
         <script>
@@ -42,14 +45,21 @@
             currentValue = Number(document.getElementById("penaltyValue").innerText);
             document.getElementById("input1").value = "";
             }
-
-
-            function ChangePenalty()
+            
+            function setPenalty()
             {
-            var changePenaltyValue = Number(document.getElementById("input2").value);
-            a = changePenaltyValue;
-            document.getElementById("changePenlty").innerText = changePenaltyValue;
+            a = Number(document.getElementById("input2").value);
+            document.getElementById("changePenlty").innerText = a;
             document.getElementById("input2").value = "";
+
+            
+            document.getElementById("first").removeAttribute("style");
+            document.getElementById("sec").removeAttribute("style");
+            document.getElementById("third").removeAttribute("style");
+            document.getElementById("input1").removeAttribute("style");
+            document.getElementById("c").removeAttribute("style");
+            document.getElementById("change").remove();
+            document.getElementById("input2").remove();
             }
         
         </script>
