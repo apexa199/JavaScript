@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+           Current Fixed Penalty : 10
+        </div>
+
+        <div>
+            Current Penalty Value :<span id = "penaltyValue"></span><br/><br />
+        </div>
+            
+        <button onclick="addFixedPenalty()" id="fixValue" >Add Fixed value</button><br /><br/>
+        
+        <div>
+            <input type="text" id= "input1" />
+            <button onclick="addCustomValue()" >Add Custom Value</button>
+        </div><br>
+
+        <div>
+            <input type="text" id="input2" />
+            <button onclick="ChangePenalty()"> Change Penalty Value</button>
+        </div>  
+
+        <script>
+            var currentValue = 0;
+            var a = 10;
+            function addFixedPenalty()
+            {
+                document.getElementById("penaltyValue").innerText = currentValue  + a;
+                currentValue = currentValue + a;
+            }
+
+            function addCustomValue()
+            {
+            var newPenltyValue = Number(document.getElementById("input1").value);
+            document.getElementById("penaltyValue").innerText = currentValue + newPenltyValue;
+            currentValue = Number(document.getElementById("penaltyValue").innerText);
+            document.getElementById("input1").value = "";
+            }
+
+
+            function ChangePenalty()
+            {
+            var changePenaltyValue = Number(document.getElementById("input2").value);
+            a = changePenaltyValue;
+            document.getElementById("input2").value = "";
+            }
+        
+        </script>
+    </body>
+</html>
+
+
+
