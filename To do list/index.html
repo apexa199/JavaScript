@@ -9,10 +9,10 @@
     <button onclick="addtodo()">Submit</button>
     <ul id="result"></ul>
     <script>
-        function addtodo()
+        const addtodo = () =>
         {
-            var inputValue = document.getElementById("input1").value;
-            var liElement = "<li>" + inputValue + "</li>";
+            let inputValue = document.getElementById("input1").value;
+            let liElement = (`<li> ${inputValue} </li>`);
             document.getElementById("result").innerHTML += liElement;
             document.getElementById("input1").value = "";
         }
@@ -34,10 +34,10 @@
     <button onclick="addtodo()">Submit</button>
     <ul id="result"></ul>
     <script>
-        function addtodo()
+        CONST addtodo = () =>
         {
-            var inputValue = document.getElementById("input1").value;
-            var liElement1 = document.createElement("li");
+            let inputValue = document.getElementById("input1").value;
+            let liElement1 = document.createElement("li");
             liElement1.innerText = inputValue;
             document.getElementById("result").append(liElement1);
             document.getElementById("input1").value = "";

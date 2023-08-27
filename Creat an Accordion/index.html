@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            border: none;
+            border-radius: 2px;
+            padding:18px;
+            text-align: left;
+            background-color: rgb(212, 212, 212);
+            width: 100%;
+            font-size: 20px;
+            }
+        .div1{
+            padding: 0 18px;
+            background-color:white;
+            display: none;
+        
+    
+        }
+        .active, .first:hover {
+            background-color:rgb(155, 150, 150);;
+        }
+        
+    </style>
+</head>
+<body>
+    <button class="first" >Section 1</button>
+    <div class="div1" >
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima possimus mollitia at totam laborum consequuntur itaque, commodi doloremque excepturi repudiandae doloribus aut, natus, quo alias id perspiciatis quis qui! Magnam repellat facere ullam quisquam fugit fuga dignissimos doloribus necessitatibus amet.
+        Atque molestiae, quos impedit cumque placeat dolor deserunt? Optio aspernatur, rem voluptates eius ex fuga vel nisi, cumque inventore rerum impedit obcaecati placeat veniam distinctio sit. Ea, nesciunt facilis! Quaerat hic iure deserunt veniam? Odio eaque quas harum officiis veniam.</p>
+    </div>
+
+    <button class="first">Section 2</button>
+    <div class="div1" >
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima possimus mollitia at totam laborum consequuntur itaque, commodi doloremque excepturi repudiandae doloribus aut, natus, quo alias id perspiciatis quis qui! Magnam repellat facere ullam quisquam fugit fuga dignissimos doloribus necessitatibus amet.
+        Atque molestiae, quos impedit cumque placeat dolor deserunt? Optio aspernatur, rem voluptates eius ex fuga vel nisi, cumque inventore rerum impedit obcaecati placeat veniam distinctio sit. Ea, nesciunt facilis! Quaerat hic iure deserunt veniam? Odio eaque quas harum officiis veniam.</p>
+    </div>
+
+    <button class="first">Section 3</button>
+    <div class="div1" >
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima possimus mollitia at totam laborum consequuntur itaque, commodi doloremque excepturi repudiandae doloribus aut, natus, quo alias id perspiciatis quis qui! Magnam repellat facere ullam quisquam fugit fuga dignissimos doloribus necessitatibus amet.
+        Atque molestiae, quos impedit cumque placeat dolor deserunt? Optio aspernatur, rem voluptates eius ex fuga vel nisi, cumque inventore rerum impedit obcaecati placeat veniam distinctio sit. Ea, nesciunt facilis! Quaerat hic iure deserunt veniam? Odio eaque quas harum officiis veniam.</p>
+    </div>
+
+    <script>
+        let sec = document.getElementsByClassName("first");
+        
+        for(let i = 0; i <sec.length; i++)
+        {
+            sec[i].addEventListener('click',function(){
+                var div1 = this.nextElementSibling;
+                if(div1.style.display === "none")
+            {
+                div1.style.display = "block";
+            }
+            else{
+                div1.style.display = "none";
+            }
+            });
+        }
+       
+    
+    </script>
+ 
+
+
+</body>
+</html>
