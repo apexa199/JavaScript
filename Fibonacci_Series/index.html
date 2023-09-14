@@ -10,7 +10,7 @@
     <div>Fibonnaci series :<span id="result"></span></div>
 
     <script>
-        function Fiboseries()
+        let Fiboseries = () =>
         {
             var length = Number(document.getElementById("Input1").value);
             var firstNumber = 0;
@@ -22,20 +22,25 @@
            
             for(i = 1; i <= length ; i++)
             {
-                if (length === 1)
+                if (i === 1)
                 {
-                    document.getElementById("result").innerText = "0";
+                    document.getElementById("result").innerText = "0,";
+                    
                 }
-                else if (length === 2)
+                else if (i === 2)
                 {
-                    document.getElementById("result").innerText = "0, 1";
+                    document.getElementById("result").innerText += "1,";
+                    
 
                 }
                 else
-                {   var nextNumber = firstNumber + lastNumber;
+                
+                {   
+                    var nextNumber = firstNumber + lastNumber;
                     var firstNumber = lastNumber;
                     var lastNumber = nextNumber;
-                    document.getElementById("result").innerText += nextNumber;
+                    document.getElementById("result").innerText += (`${nextNumber} ,`);
+                    document.getElementById("Input1").value = "";
                 }
             }
         }
