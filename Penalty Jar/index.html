@@ -8,7 +8,7 @@
     </head>
     <body>
         <div style="display: none;" id = "first">
-           Current Fixed Penalty : <span id="changePenlty">10</span>
+           Current Fixed Penalty : <span id="changePenlty">0</span>
         </div>
 
         <div style="display: none;" id = "sec">
@@ -31,7 +31,7 @@
 
         <script>
             var currentValue = 0;
-            var a = 10;
+            var a ;
             function addFixedPenalty()
             {
                 document.getElementById("penaltyValue").innerText = currentValue  + a;
