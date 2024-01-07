@@ -45,6 +45,30 @@
             }
         }
         
+
+
+        //.....Second Method .....//
+
+
+        let x = 0 , y = 1 , change;
+
+        const FibboS = (n) => {
+
+            let result = [];
+
+            for(i = 0 ; i < n; i++)
+            {
+                result.push(x)
+                change = x + y;
+
+                x = y;
+                y = change
+            }
+            return result;
+        }
+        document.write(FibboS(10))
+
+        
       
     </script>
 </body>
